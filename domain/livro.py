@@ -14,7 +14,7 @@ class Livro:
         self.desconto_percentual = desconto_percentual
     
     def preco_final(self) -> float:
-        if self.tipo == 1:  # Gratuito
+        if self.tipo == 1:
             return 0.0
         
         desconto = self.preco * (self.desconto_percentual / 100)

@@ -5,6 +5,11 @@ from services.biblioteca_service import (criar_livro, listar_livros, buscar_livr
 
 router = APIRouter(prefix="/livros", tags=["Livros"])
 
+
+class AlterarPrecoInput(BaseModel):
+    preco: float
+
+
 @router.post("", response_model=LivroOut)
 
 def post_livro(data: LivroCreate):
